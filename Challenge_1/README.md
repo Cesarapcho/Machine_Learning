@@ -5,7 +5,7 @@
 **Curso:** Machine Learning · **Docente:** Yannick Patrick Carrasco Merma  
 **Estudiante:** Cesar Alejandro Aaron Apcho Meneses · **Universidad:** Universidad Peruana Cayetano Heredia
 
-[Notebook de Google Colab](Challenge1_CesarApcho.ipynb) · [Guía web interactiva](web/index.html)
+[Notebook de Google Colab](Challenge1_CesarApcho.ipynb) · [Guía web interactiva](https://cesarapcho.github.io/Machine_Learning/Challenge_1/web/)
 
 > **Alcance:** prueba de concepto académica. Los nombres y códigos de establecimientos se emplean como referencias documentales; stock, necesidades, prioridades, kilómetros, costos y entregas son simulados. No es un plan logístico real ni una recomendación clínica.
 
