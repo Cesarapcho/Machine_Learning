@@ -207,7 +207,8 @@ La reducción de los indicadores es relevante para la salud pública, pero **no 
 
 ## 6. Implementación
 
-**[Consultar el notebook del Challenge 2](Challenge2_CesarApcho.ipynb)** — desarrollado a partir del notebook del examen parcial, con los dos pipelines en Python.
+**[Consultar el notebook del Challenge 2](Challenge2.ipynb)** — desarrollado a partir del notebook del examen parcial, con los dos pipelines en Python.
+**[Consultar el notebook del examen parcial](Parcial_MachineLearning)** — Código desarrollado durante el Examen Parcial del curso.
 
 <div align="center">
 
