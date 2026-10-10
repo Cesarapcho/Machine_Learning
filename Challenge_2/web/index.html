@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Explora BFS y regresión lineal con animaciones interactivas. Challenge 2: IRA y neumonía infantil en Perú.">
+  <title>Machine Learning en movimiento · Challenge 2</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230b1220'/%3E%3Ctext x='7' y='27' font-family='sans-serif' font-size='22' font-weight='bold' fill='%2374e0ca'%3EC2%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#laboratorio">Ir al laboratorio</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+    <symbol id="icon-back" viewBox="0 0 24 24"><path d="M6 5v14m12-14L8 12l10 7Z"/></symbol>
+    <symbol id="icon-next" viewBox="0 0 24 24"><path d="M18 5v14M6 5l10 7-10 7Z"/></symbol>
+    <symbol id="icon-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5m-4-13-2 16"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 32 32"><circle cx="6" cy="8" r="3"/><circle cx="26" cy="24" r="3"/><path d="M9 8h13a5 5 0 0 1 0 10H10a3 3 0 0 0 0 6h13"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 32 32"><path d="M5 5v22h23M9 9l7 6 6 4 5 5"/><circle cx="9" cy="9" r="2" fill="currentColor"/><circle cx="16" cy="15" r="2" fill="currentColor"/><circle cx="22" cy="19" r="2" fill="currentColor"/></symbol>
+  </svg>
+  <header class="topbar shell">
+    <a class="brand" href="#inicio" aria-label="Challenge 2, inicio"><span class="brand-mark">C<span>2</span></span><span>Machine Learning <span class="brand-divider">/</span> <span class="brand-lab">Laboratorio</span></span></a>
+    <span class="header-context"><span class="context-dot"></span> Aprende explorando</span>
+  </header>
+  <main id="inicio" class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">CHALLENGE 2 <span aria-hidden="true">/</span> LABORATORIO INTERACTIVO</p>
+      <h1 id="page-title">Machine Learning <span>en movimiento.</span></h1>
+      <p class="intro-description">Dos algoritmos explicados con animaciones.</p>
+    </section>
+    <section id="laboratorio" class="laboratory" aria-label="Laboratorio interactivo" tabindex="-1" data-mode="bfs" data-step="0" data-playing="false">
+      <div class="mode-tabs" role="tablist" aria-label="Elegir algoritmo">
+        <button class="mode-tab is-selected" type="button" id="tab-bfs" role="tab" aria-selected="true" aria-controls="panel-bfs" data-mode="bfs"><span class="mode-number">01</span><span class="mode-copy"><strong>BFS</strong><span>Explorar estados</span></span><svg class="mode-illustration" aria-hidden="true"><use href="#icon-route"/></svg></button>
+        <button class="mode-tab" type="button" id="tab-reg" role="tab" aria-selected="false" aria-controls="panel-reg" tabindex="-1" data-mode="reg"><span class="mode-number">02</span><span class="mode-copy"><strong>Regresión</strong><span>Encontrar tendencias</span></span><svg class="mode-illustration" aria-hidden="true"><use href="#icon-chart"/></svg></button>
+      </div>
+      <div class="lab-frame">
+        <div class="lab-topline"><span id="scene-label">Búsqueda en amplitud</span><span class="run-indicator"><span class="run-dot"></span><span id="run-state">Listo para explorar</span></span></div>
+        <div class="lab-body">
+          <div class="visual-column">
+            <section id="panel-bfs" class="scene" role="tabpanel" aria-labelledby="tab-bfs">
+              <div class="scene-heading"><span>Un camino. Seis estados.</span><span class="scene-tag">E0 → E5</span></div>
+              <div id="bfs-machine" class="bfs-machine" aria-label="Secuencia conceptual de seis estados">
+                <svg id="bfs-connections" class="bfs-connections" aria-hidden="true"><defs><marker id="edge-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs><path id="edge-0"/><path id="edge-1"/><path id="edge-2"/><path id="edge-3"/><path id="edge-4"/><circle id="signal" r="4" opacity="0"/></svg>
+                <div class="state-node" id="node-0"><div class="node-orb"><span>E0</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Presencia alta</h2><span class="node-status" id="node-status-0">En cola</span></div></div>
+                <div class="state-node" id="node-1"><div class="node-orb"><span>E1</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Prevención</h2><span class="node-status" id="node-status-1">En espera</span></div></div>
+                <div class="state-node" id="node-2"><div class="node-orb"><span>E2</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Vigilancia</h2><span class="node-status" id="node-status-2">En espera</span></div></div>
+                <div class="state-node" id="node-3"><div class="node-orb"><span>E3</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Tratamiento</h2><span class="node-status" id="node-status-3">En espera</span></div></div>
+                <div class="state-node" id="node-4"><div class="node-orb"><span>E4</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Seguimiento</h2><span class="node-status" id="node-status-4">En espera</span></div></div>
+                <div class="state-node" id="node-5"><div class="node-orb"><span>E5</span><span class="node-check" aria-hidden="true">✓</span></div><div class="node-copy"><h2>Reducción</h2><span class="node-status" id="node-status-5">Objetivo</span></div></div>
+              </div>
+              <div class="diagram-legend" aria-label="Leyenda"><span><i class="legend-dot queued"></i> En cola</span><span><i class="legend-dot current"></i> Actual</span><span><i class="legend-dot visited"></i> Visitado</span></div>
+              <div class="fifo-area"><div class="fifo-heading"><h3>Cola FIFO <span id="queue-count">1 camino</span></h3><span id="queue-action">Entrar</span></div><div class="fifo-conveyor"><span class="fifo-direction" aria-hidden="true">←</span><div id="queue-track" class="queue-track" aria-label="Caminos en la cola"></div><span class="fifo-direction" aria-hidden="true">←</span></div><p>Primero en entrar, primero en salir.</p></div>
+              <p class="scene-footnote" id="bfs-caption">Una secuencia conceptual, no evidencia de efectividad clínica.</p>
+            </section>
+            <section id="panel-reg" class="scene" role="tabpanel" aria-labelledby="tab-reg" hidden>
+              <div class="scene-heading"><span>Defunciones por neumonía</span><span class="scene-tag">Perú · menores de 5</span></div>
+              <p class="data-period">Hasta la semana epidemiológica 24 <span>· No son años completos</span></p>
+              <div id="chart-wrap" class="chart-wrap"><svg id="reg-chart" role="img" aria-labelledby="chart-title chart-description" viewBox="0 0 800 355"><title id="chart-title">Regresión lineal de defunciones por neumonía</title><desc id="chart-description">2023: 113; 2024: 82; 2025: 51. Estimación ilustrativa para 2026: 20. Todos los periodos hasta SE 24.</desc><rect id="forecast-area"/><g id="chart-grid"></g><g id="chart-labels"></g><path id="trend-line"/><path id="model-line"/><path id="forecast-line"/><g id="observed-points"><g id="point-2023"></g><g id="point-2024"></g><g id="point-2025"></g></g><g id="point-2026"></g></svg></div>
+              <div class="diagram-legend chart-legend"><span><i class="legend-dot current"></i> Observados</span><span><i class="legend-line"></i> Modelo</span><span><i class="legend-dash"></i> Estimación</span></div>
+              <ol id="reg-phase-list" class="reg-phases" aria-label="Fases de la regresión"><li data-phase="data">Datos</li><li data-phase="trend">Tendencia</li><li data-phase="model">Modelo</li><li data-phase="estimate">Estimación</li><li data-phase="caution">Límite</li></ol>
+              <p id="estimate-note" class="estimate-note">*Estimación ilustrativa, no dato real.</p>
+            </section>
+          </div>
+          <aside class="step-panel" aria-label="Paso actual y controles">
+            <div class="step-meta"><span id="step-phase">Preparar</span><span><span id="step-number">01</span> <span class="step-divider">/</span> <span id="step-total">18</span></span></div>
+            <div class="step-narrative"><h2 id="step-title">Todo empieza en E0.</h2><p id="step-explanation">El camino inicial entra en la cola, listo para explorar.</p><p id="state-description" class="state-description">Alta presencia de IRA y neumonía</p></div>
+            <div id="bfs-details" class="algorithm-details"><div class="detail-heading"><span>Visitados</span><span id="visited-count">0 / 6</span></div><div id="visited-list" class="visited-list" aria-label="Estados en visitados"></div></div>
+            <div id="reg-details" class="algorithm-details" hidden><span id="reg-result-label" class="result-label">Observaciones</span><strong id="reg-result" class="reg-result">3</strong></div>
+            <div class="transport-slot"><div class="transport">
+              <button id="play-btn" class="play-button" type="button"><svg class="icon" aria-hidden="true"><use id="play-icon" href="#icon-play"/></svg><span id="play-label">Reproducir</span></button>
+              <div class="transport-secondary"><button id="back-btn" class="icon-button" type="button" aria-label="Paso anterior" title="Paso anterior" disabled><svg class="icon" aria-hidden="true"><use href="#icon-back"/></svg></button><button id="next-btn" class="icon-button" type="button" aria-label="Paso siguiente" title="Paso siguiente"><svg class="icon" aria-hidden="true"><use href="#icon-next"/></svg></button><button id="reset-btn" class="icon-button" type="button" aria-label="Reiniciar" title="Reiniciar"><svg class="icon" aria-hidden="true"><use href="#icon-reset"/></svg></button><label class="speed-control"><span class="sr-only">Velocidad de animación</span><select id="speed-select" aria-label="Velocidad de animación"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+            </div>
+            </div><button id="code-toggle" class="text-button code-toggle" type="button" aria-controls="code-panel" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg> Ver código <span class="code-language">Python</span></button>
+          </aside>
+        </div>
+        <div class="timeline" aria-hidden="true"><div id="progress-fill"></div></div>
+        <section id="code-panel" class="code-panel" aria-label="Código del paso actual" hidden><div class="code-header"><div><h2>Código del notebook</h2><p id="code-caption">Instrucción del paso actual</p></div><button id="code-close" class="icon-button" type="button" aria-label="Cerrar código"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button></div><pre tabindex="0" aria-label="Fragmento Python"><code id="code-content"></code></pre></section>
+      </div>
+      <div class="lab-caption"><span>IRA y neumonía infantil · Perú</span><button id="info-toggle" class="text-button" type="button" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="#icon-info"/></svg> Sobre este modelo</button></div>
+      <p id="sr-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p class="no-script">Activa JavaScript para reproducir las animaciones. Los algoritmos y datos también están disponibles en el notebook.</p></noscript>
+    </section>
+  </main>
+  <footer class="footer shell"><span><strong>Challenge 2</strong> · Machine Learning</span><nav aria-label="Recursos del proyecto"><a href="https://github.com/Cesarapcho/Machine_Learning/blob/main/Challenge_2/Challenge2.ipynb" target="_blank" rel="noopener noreferrer">Notebook <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><a href="https://github.com/Cesarapcho/Machine_Learning" target="_blank" rel="noopener noreferrer">Repositorio <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></nav></footer>
+  <dialog id="info-dialog" aria-labelledby="info-title"><div class="dialog-header"><h2 id="info-title">Sobre este modelo</h2><button id="info-close" class="icon-button" type="button" aria-label="Cerrar información"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button></div><div id="info-content"></div><a class="dialog-link" href="https://github.com/Cesarapcho/Machine_Learning/blob/main/Challenge_2/Challenge2.ipynb" target="_blank" rel="noopener noreferrer">Consultar el notebook ↗</a></dialog>
+</body>
+</html>
+
