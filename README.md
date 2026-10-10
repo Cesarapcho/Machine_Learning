@@ -66,13 +66,17 @@ Dos aplicaciones de IA y aprendizaje automático a problemas del ámbito de la s
       <p align="center">
         <img src="https://img.shields.io/badge/IA-BFS-2563EB?style=flat-square" alt="Búsqueda BFS" />
         <img src="https://img.shields.io/badge/ML-Regresi%C3%B3n%20lineal-7C3AED?style=flat-square" alt="Regresión lineal" />
-      </p>
       <p align="center">
         <a href="Challenge_2/README.md"><strong>Informe</strong></a>
         &nbsp;·&nbsp;
         <a href="Challenge_2/Challenge2.ipynb"><strong>Notebook</strong></a>
         &nbsp;·&nbsp;
-        <a href="Challenge_2/Parcial_MachineLearning.ipynb"><strong>Notebook original</strong></a>
+        <a href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/"><strong>Web interactiva</strong></a>
+      </p>   
+      <p align="center">
+        <sub>
+          <a href="Challenge_2/Parcial_MachineLearning.ipynb">Ver notebook original del parcial</a>
+        </sub>
       </p>
     </td>
   </tr>
