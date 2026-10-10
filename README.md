@@ -71,7 +71,7 @@ Dos aplicaciones de IA y aprendizaje automático a problemas del ámbito de la s
         &nbsp;·&nbsp;
         <a href="Challenge_2/Challenge2.ipynb"><strong>Notebook</strong></a>
         &nbsp;·&nbsp;
-        <a href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/"><strong>Web interactiva</strong></a>
+        <a href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/" target="_blank"><strong>Web interactiva</strong></a>
       </p>   
       <p align="center">
         <sub>
