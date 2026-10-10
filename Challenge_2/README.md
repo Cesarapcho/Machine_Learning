@@ -234,7 +234,7 @@ La reducción de los indicadores es relevante para la salud pública, pero **no 
 ### Infografía del caso
 
 <p align="center">
-  <img src="images/Informacion.jpeg" width="95%" alt="Infografía sobre IRA y neumonía en menores de cinco años en el Perú" />
+  <img src="images/Info.webp" width="95%" alt="Infografía sobre IRA y neumonía en menores de cinco años en el Perú" />
 </p>
 <p align="center"><sub>Figura 3. Infografía del examen parcial · <a href="https://www.gob.pe/institucion/minsa/noticias/1192975">Fuente de los datos: MINSA</a>.</sub></p>
 
