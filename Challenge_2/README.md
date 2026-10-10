@@ -22,6 +22,19 @@
 
 <sub>Curso: Machine Learning &nbsp;·&nbsp; Python &nbsp;·&nbsp; Google Colab &nbsp;·&nbsp; GitHub</sub>
 
+<p align="center">
+  <a href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/">
+    <img
+      src="https://img.shields.io/badge/Click Aqui-SIMULADOR%20INTERACTIVO-159A9C?style=for-the-badge&logo=githubpages&logoColor=white"
+      alt="Explorar simulador interactivo"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <sub>Visualiza paso a paso la búsqueda BFS y la regresión lineal.</sub>
+</p>
+
 </div>
 
 
