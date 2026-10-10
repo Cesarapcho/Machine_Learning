@@ -23,9 +23,13 @@
 <sub>Curso: Machine Learning &nbsp;·&nbsp; Python &nbsp;·&nbsp; Google Colab &nbsp;·&nbsp; GitHub</sub>
 
 <p align="center">
-  <a href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/">
+  <a
+    href="https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img
-      src="https://img.shields.io/badge/Click Aqui-SIMULADOR%20INTERACTIVO-159A9C?style=for-the-badge&logo=githubpages&logoColor=white"
+      src="https://img.shields.io/badge/CLICK AQUI-SIMULADOR%20INTERACTIVO-159A9C?style=for-the-badge&logo=githubpages&logoColor=white"
       alt="Explorar simulador interactivo"
     />
   </a>
