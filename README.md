@@ -66,6 +66,7 @@ Dos aplicaciones de IA y aprendizaje automático a problemas del ámbito de la s
       <p align="center">
         <img src="https://img.shields.io/badge/IA-BFS-2563EB?style=flat-square" alt="Búsqueda BFS" />
         <img src="https://img.shields.io/badge/ML-Regresi%C3%B3n%20lineal-7C3AED?style=flat-square" alt="Regresión lineal" />
+      </p>
       <p align="center">
         <a href="Challenge_2/README.md"><strong>Informe</strong></a>
         &nbsp;·&nbsp;
