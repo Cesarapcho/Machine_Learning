@@ -224,11 +224,17 @@ La reducción de los indicadores es relevante para la salud pública, pero **no 
 
 ## 6. Implementación
 
-**[Consultar el notebook del Challenge 2](Challenge2.ipynb)** — desarrollado a partir del notebook del examen parcial, con los dos pipelines en Python.
-
-**[Consultar el notebook del examen parcial](Parcial_MachineLearning.ipynb)** — Código desarrollado durante el Examen Parcial del curso.
-
 <div align="center">
+
+
+### Recursos del proyecto
+
+| Recurso | Descripción |
+|:--|:--|
+| [Web interactiva](https://cesarapcho.github.io/Machine_Learning/Challenge_2/web/) | Simulador visual de BFS y regresión lineal. |
+| [Notebook del Challenge 2](Challenge2.ipynb) | Implementación de los algoritmos en Python. |
+| [Notebook original](Parcial_MachineLearning.ipynb) | Trabajo del examen parcial. |
+
 
 <br>
 
