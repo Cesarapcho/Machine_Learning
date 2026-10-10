@@ -24,15 +24,6 @@
 
 </div>
 
----
-
-## Navegación
-
-| **El caso** | **Metodología** | **Evidencia y entrega** |
-|:--:|:--:|:--:|
-| [Contexto y datos](#1-contexto-del-caso) | [Espacio de estados](#31-espacio-de-estados) | [Resultados](#4-resultados-y-discusión) |
-| [Problema y objetivos](#2-problema-justificación-y-objetivos) | [Búsqueda BFS](#32-pipeline-de-razonamiento-y-búsqueda) | [Conclusiones](#5-conclusiones) |
-| [Fuentes](#7-fuentes-de-información) | [Regresión lineal](#33-pipeline-de-predicción-y-visualización) | [Notebook](#6-implementación) |
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=0:F7C65A,30:F39200,70:E9A21B,100:159A9C&height=4&section=header" width="100%" alt="Separador con degradado" />
@@ -46,6 +37,8 @@ Las **infecciones respiratorias agudas (IRA)** afectan las vías respiratorias; 
 
 ### Indicadores principales
 
+<div align="center">
+
 | **824 978** | **51** | **−18 %** |
 |:--:|:--:|:--:|
 | Episodios de IRA en 2025 | Defunciones por neumonía en 2025 | Episodios de IRA en 2025 frente a 2023 |
@@ -54,6 +47,8 @@ Las **infecciones respiratorias agudas (IRA)** afectan las vías respiratorias; 
 |:--|--:|--:|--:|
 | Episodios de IRA | 1 003 178 | 883 959 | **824 978** |
 | Defunciones por neumonía | 113 | 82 | **51** |
+
+</div>
 
 <p align="center">
   <img src="images/tendencia_ira.png" width="88%" alt="Gráfico de evolución de episodios de IRA en menores de cinco años" />
@@ -89,6 +84,8 @@ Las **infecciones respiratorias agudas (IRA)** afectan las vías respiratorias; 
 
 Un **estado** describe una situación del problema; el **espacio de estados** reúne las situaciones consideradas y las conexiones entre ellas.
 
+<div align="center">
+
 | Estado | Situación | Tipo |
 |:--:|:--|:--|
 | **E0** | Alta presencia de IRA y neumonía | **Inicial** |
@@ -97,6 +94,8 @@ Un **estado** describe una situación del problema; el **espacio de estados** re
 | E3 | Atención médica y tratamiento | Intermedio |
 | E4 | Seguimiento y control sanitario | Intermedio |
 | **E5** | Reducción de casos y defunciones | **Objetivo** |
+
+</div>
 
 Las flechas del diagrama son **transiciones** y sus etiquetas indican los **operadores**, es decir, las acciones que conectan los estados.
 
@@ -130,13 +129,16 @@ flowchart TD
 
 Se aplica **BFS (Breadth-First Search o búsqueda en amplitud)**, algoritmo que explora primero los estados más cercanos al inicial. Utiliza una cola **FIFO** («primero en entrar, primero en salir»).
 
+<div align="center">
+
 | Etapa | Aplicación |
 |:--|:--|
 | **Problema** | Ir de E0 (situación inicial) a E5 (objetivo). |
 | **Estados** | Representar E0, E1, E2, E3, E4 y E5. |
 | **Exploración** | Revisar las conexiones y registrar estados visitados. |
 | **Búsqueda** | Ejecutar BFS hasta encontrar E5. |
-| **Resultado** | **E0 → E1 → E2 → E3 → E4 → E5**. |
+
+</div>
 
 <p align="center"><strong>E0 → E1 → E2 → E3 → E4 → E5</strong></p>
 
@@ -146,6 +148,8 @@ Como existe **una sola ruta**, BFS muestra el recorrido, pero **no compara alter
 
 Se emplea **regresión lineal**, un modelo de aprendizaje supervisado que utiliza ejemplos conocidos para ajustar una recta y estimar un valor numérico. Se eligió por su sencillez e interpretación visual.
 
+<div align="center">
+
 | Etapa | Aplicación |
 |:--|:--|
 | **Datos** | Años 2023, 2024 y 2025; defunciones **113, 82 y 51**. |
@@ -154,6 +158,8 @@ Se emplea **regresión lineal**, un modelo de aprendizaje supervisado que utiliz
 | **Modelo** | `LinearRegression` de Scikit-learn. |
 | **Estimación** | Periodo equivalente de 2026. |
 | **Visualización** | Datos observados y extrapolación en una gráfica. |
+
+</div>
 
 <p align="center"><strong>Datos históricos → Entrenamiento → Regresión lineal → Estimación 2026 → Gráfica</strong></p>
 
@@ -172,12 +178,16 @@ La disminución es de **31 defunciones por año** en estos tres registros. Al pr
 
 ## 4. Resultados y discusión
 
+<div align="center">
+  
 | Componente | Resultado obtenido | Interpretación |
 |:--|:--|:--|
 | **Búsqueda BFS** | E0 → E1 → E2 → E3 → E4 → E5 | Ruta conceptual única. |
 | **IRA** | 1 003 178 → 824 978 | Disminución observada entre 2023 y 2025. |
 | **Defunciones** | 113 → 82 → 51 | Tendencia histórica descendente. |
 | **Regresión lineal** | **20** para 2026 | Extrapolación ilustrativa, no cifra confirmada. |
+
+</div>
 
 La reducción de los indicadores es relevante para la salud pública, pero **no demuestra una relación causal** con las medidas preventivas. Para evaluar su impacto o construir predicciones más confiables se necesitarían más años de datos y variables epidemiológicas adicionales.
 
@@ -199,6 +209,8 @@ La reducción de los indicadores es relevante para la salud pública, pero **no 
 
 **[Consultar el notebook del Challenge 2](Challenge2_CesarApcho.ipynb)** — desarrollado a partir del notebook del examen parcial, con los dos pipelines en Python.
 
+<div align="center">
+
 | Herramienta | Uso |
 |:--|:--|
 | **Google Colab y Python** | Ejecución del notebook y procesamiento de datos. |
@@ -206,6 +218,8 @@ La reducción de los indicadores es relevante para la salud pública, pero **no 
 | **NumPy y Scikit-learn** | Preparación de datos y regresión lineal. |
 | **Matplotlib** | Elaboración de las gráficas. |
 | **GitHub** | Presentación y documentación del trabajo. |
+
+</div>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=0:F7C65A,30:F39200,70:E9A21B,100:159A9C&height=4&section=header" width="100%" alt="Separador con degradado" />
